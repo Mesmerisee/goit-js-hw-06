@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const itemsEl = document.querySelector(".gallery");
+const addImages = images.map(img => `<li><img src="${img.url}" alt="${img.alt}" width="480" height="320"</li>`).join("");
+itemsEl.insertAdjacentHTML("beforeend", addImages);
+itemsEl.style.outline = "8px solid navy";
+console.log(itemsEl);
